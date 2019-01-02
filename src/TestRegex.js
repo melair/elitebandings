@@ -16,7 +16,6 @@ console.log("Loading bindings...");
 let bindingXML = fs.readFileSync(bindingsFile, 'utf8');
 
 let binding = xml2js(bindingXML, { compact: true });
-console.log(binding);
 
 let keys = Object.keys(binding.Root).filter((name) => name !== "_attributes");
 

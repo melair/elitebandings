@@ -1,0 +1,20 @@
+{
+  "base": "bindings/3.3/SaitekX52Pro.binds",
+  "layers": [
+    {
+      "file": "bindings/3.3/ConsoleX360.binds",
+      "categories": [
+        "Driv.*",
+        "Full Spectrum System Scanner",
+        "Detailed Surface Scan"
+      ]
+    },
+    {
+      "file": "bindings/3.3/KeyboardMouseOnly.binds",
+      "categories": [
+        "Camera Suite",
+        "Free Camera"
+      ]
+    }
+  ]
+}

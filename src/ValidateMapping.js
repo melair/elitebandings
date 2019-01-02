@@ -1,5 +1,5 @@
 const fs = require('fs');
-const xml2js = require('xml2js').parseString;
+const xml2js = require('xml-js').xml2js;
 
 if (process.argv.length < 4) {
   console.log("You must provide a mapping file to validate and a bindings file to check against.");
@@ -27,10 +27,9 @@ let mappingCompiled = sectionNames.reduce((acc, key) => {
 console.log("Loading bindings...");
 let bindingXML = fs.readFileSync(bindingsFile, 'utf8');
 
-let binding;
-xml2js(bindingXML, (e, r) => { binding = r });
+let binding = xml2js(bindingXML, { compact: true });
 
-let keys = Object.keys(binding.Root).filter((name) => name !== "$");
+let keys = Object.keys(binding.Root).filter((name) => name !== "_attributes");
 
 console.log("Found " + keys.length + " bindings...");
 

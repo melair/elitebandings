@@ -1,5 +1,5 @@
 const fs = require('fs');
-const xml2js = require('xml2js').parseString;
+const xml2js = require('xml-js').xml2js;
 
 if (process.argv.length < 4) {
   console.log("You must provide a bindings file and test regex.");
@@ -12,14 +12,13 @@ let testRegex = process.argv[3];
 console.log("Bindings: " + bindingsFile);
 console.log("Test Regex: " + testRegex);
 
-
 console.log("Loading bindings...");
 let bindingXML = fs.readFileSync(bindingsFile, 'utf8');
 
-let binding;
-xml2js(bindingXML, (e, r) => { binding = r });
+let binding = xml2js(bindingXML, { compact: true });
+console.log(binding);
 
-let keys = Object.keys(binding.Root).filter((name) => name !== "$");
+let keys = Object.keys(binding.Root).filter((name) => name !== "_attributes");
 
 console.log("Found " + keys.length + " bindings...");
 

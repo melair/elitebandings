@@ -1,29 +1,160 @@
 {
-  "Mouse Controls": [],
-  "Flight Rotation": [],
-  "Flight Thrust": [],
-  "Alternative Flight Controls": [],
-  "Flight Throttle": [],
-  "Flight Landing Overrides": [],
-  "Flight Miscellaneous": [],
-  "Targeting": [],
-  "Weapons": [],
-  "Cooling": [],
-  "Miscellaneous": [],
-  "Mode Switches": [],
-  "Interface Mode": [],
-  "Headlook Mode": [],
-  "Galaxy Map": [],
-  "Driving": [],
-  "Driving Targeting": [],
-  "Driving Miscellaneous": [],
-  "Driving Mode Switches": [],
-  "Multi-Crew": [],
-  "Fighter Orders": [],
-  "Camera Suite": [],
-  "Free Camera": [],
-  "Holo-Me": [],
-  "Playlist": [],
-  "Full Spectrum System Scanner": [],
-  "Detailed Surface Scan": []
+  "Keyboard Setting": [
+    "^KeyboardLayout$"
+  ],
+  "Mouse Controls": [
+    "^Mouse(?!Head|Buggy|Turret).*"
+  ],
+  "Flight Rotation": [
+    "^(?!Head|Buggy|Turret|Multi|SAA).*AxisRaw$",
+    "^(?!Steer|Buggy|Multi|SAA).*(Up|Down|Left|Right)Button$",
+    "^YawToRoll[a-zA-Z]*(_FAOff)?$"
+  ],
+  "Flight Thrust": [
+    "^.*Thrust(Button|Raw)$",
+    "^AheadThrust$"
+  ],
+  "Alternative Flight Controls": [
+    "^.*Alternate$",
+    "^UseAlternateFlightValuesToggle$"
+  ],
+  "Flight Throttle": [
+    "^(?!Buggy).*Throttle",
+    "^(Forward|Backward)Key$",
+    "^SetSpeed"
+  ],
+  "Flight Landing Overrides": [
+    "_Landing$"
+  ],
+  "Flight Miscellaneous": [
+    "^ToggleFlightAssist$",
+    "^UseBoostJuice$",
+    "^HyperSuperCombination$",
+    "^Supercruise$",
+    "^Hyperspace$",
+    "^DisableRotationCorrectToggle$",
+    "^OrbitLinesToggle$"
+  ],
+  "Targeting": [
+    "^(Select|Cycle).*(Target|Threat)$",
+    "^TargetWingman",
+    "^WingNavLock$",
+    "^TargetNextRouteSystem$",
+    "^Cycle.*Subsystem$"
+  ],
+  "Weapons": [
+    "^(Primary|Secondary)Fire$",
+    "^CycleFireGroup",
+    "^DeployHardpoint"
+  ],
+  "Cooling": [
+    "^ToggleButtonUpInput$",
+    "^DeployHeatSink$"
+  ],
+  "Miscellaneous": [
+    "^ShipSpotLightToggle$",
+    "^Radar",
+    "^Increase.*Power$",
+    "^ResetPowerDistribution$",
+    "^HMDReset$",
+    "^ToggleCargoScoop$",
+    "^EjectAllCargo$",
+    "^LandingGearToggle$",
+    "Mute",
+    "^UseShieldCell$",
+    "^FireChaffLauncher$",
+    "^ChargeECM$",
+    "^EnableRumbleTrigger$",
+    "^EnableMenuGroups$",
+    "(Colour|Vision)Toggle$"
+  ],
+  "Mode Switches": [
+    "^UIFocus[a-zA-Z]*(?!_Buggy)$",
+    "Focus.*(Panel|Field|Options)$",
+    "^QuickCommsPanel$",
+    "^EnableCameraLockOn$",
+    "MapOpen$",
+    "^ShowPGScoreSummaryInput$",
+    "^Pause$",
+    "^FriendsMenu$",
+    "^OpenCodexGoToDiscovery$",
+    "^PlayerHUDModeToggle$"
+  ],
+  "Interface Mode": [
+    "^UI_",
+    "^Cycle(Next|Previous)(Panel|Page)$"
+  ],
+  "Headlook Mode": [
+    "Head[Ll]ook[a-zA-Z]*$"
+  ],
+  "Galaxy Map": [
+    "^Cam"
+  ],
+  "Driving": [
+    "DriveAssist",
+    "^MouseBuggy",
+    "^Steer",
+    "^Buggy(Roll|Pitch)",
+    "^VerticalThrustersButton$",
+    "^Buggy.*FireButton$",
+    "BuggyButton$",
+    "^ToggleBuggyTurretButton$"
+  ],
+  "Driving Targeting": [
+    "^SelectTarget_Buggy$"
+  ],
+  "Driving Turret Controls": [
+    "^(Mouse|Buggy)Turret"
+  ],
+  "Drive Throttle": [
+    "^DriveSpeedAxis$",
+    "^Buggy.*Throttle",
+    "SpeedButton"
+  ],
+  "Driving Miscellaneous": [
+    "^Increase.*Power_Buggy$",
+    "^ResetPowerDistribution_Buggy$",
+    "Cargo.*_Buggy$",
+    "^RecallDismissShip$"
+  ],
+  "Driving Mode Switches": [
+    "^UIFocus_Buggy$",
+    "(Panel|Open)_Buggy$",
+    "^HeadLookToggle_Buggy$"
+  ],
+  "Multi-Crew": [
+    "^MultiCrew"
+  ],
+  "Fighter Orders": [
+    "^Order",
+    "^OpenOrders$"
+  ],
+  "Camera Suite": [
+    "^PhotoCameraToggle",
+    "^ToggleFreeCam$",
+    "^VanityCamera"
+  ],
+  "Free Camera": [
+    "^(Move)?FreeCam",
+    "^(Pitch|Yaw|Roll)Camera",
+    "^FStop",
+    "^FixCamera",
+    "^ToggleRotationLock$",
+    "^QuitCamera",
+    "^ToggleAdvanceMode$"
+  ],
+  "Holo-Me": [
+    "^CommanderCreator"
+  ],
+  "Playlist": [
+    "^GalnetAudio"
+  ],
+  "Full Spectrum System Scanner": [
+    "^ExplorationFSS",
+    "^FSS"
+  ],
+  "Detailed Surface Scan": [
+    "^ExplorationSAA",
+    "^SAA"
+  ]
 }
